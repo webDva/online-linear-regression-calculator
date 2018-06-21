@@ -31,16 +31,6 @@ function doRegression(X_set, Y_set) {
     return {slope: slope, y_intercept: y_intercept};
 }
 
-function createTable() {
-    let table = document.getElementById("dataPairs");
-    for (let i = 0; i < 20; i++) {
-        let row = table.insertRow();
-        row.insertCell().innerHTML = i;
-        row.insertCell().setAttribute("type", "number");
-        row.insertCell().setAttribute("type", "number");
-    }
-}
-
 function drawChart(slope, yIntercept, dataset) {
     let margin = { top: 20, right: 15, bottom: 20, left: 60 };
     let width = 340 - margin.left - margin.right;
