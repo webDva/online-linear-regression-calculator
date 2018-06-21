@@ -31,7 +31,17 @@ function doRegression(X_set, Y_set) {
     return {slope: slope, y_intercept: y_intercept};
 }
 
-function drawChart(slope, yIntercept) {
+function createTable() {
+    let table = document.getElementById("dataPairs");
+    for (let i = 0; i < 20; i++) {
+        let row = table.insertRow();
+        row.insertCell().innerHTML = i;
+        row.insertCell().setAttribute("type", "number");
+        row.insertCell().setAttribute("type", "number");
+    }
+}
+
+function drawChart(slope, yIntercept, dataset) {
     let margin = { top: 20, right: 15, bottom: 20, left: 60 };
     let width = 340 - margin.left - margin.right;
     let height = 340 - margin.top - margin.bottom;
@@ -64,7 +74,7 @@ function drawChart(slope, yIntercept) {
         .call(d3.axisLeft(y));
 
     svg.selectAll("circle")
-        .data(this.cleanedData)
+        .data(dataset)
         .enter().append("circle")
         .attr("cx", function (d) { return x(d[0]); })
         .attr("cy", function (d) { return y(d[1]); })
