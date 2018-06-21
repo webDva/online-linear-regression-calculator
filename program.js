@@ -33,12 +33,15 @@ function doRegression(X_set, Y_set) {
 
 function getData() {
     const collection = document.getElementById("dataPairs").rows;
-    let data = [];
+    let X = [];
+    let Y = [];
     for (let i = 1; i < collection.length; i++) {
-        if (collection[i].cells[1].children[0].value && collection[i].cells[1].children[0].value)
-            data.push([collection[i].cells[1].children[0].value, collection[i].cells[1].children[1].value].map(Number));
+        if (collection[i].cells[1].children[0].value && collection[i].cells[1].children[0].value) {
+            X.push(Number(collection[i].cells[1].children[0].value));
+            Y.push(Number(collection[i].cells[1].children[1].value));
+        }
     }
-    return data;
+    return {X: X, Y: Y};
 }
 
 function drawChart(slope, yIntercept, dataset) {
