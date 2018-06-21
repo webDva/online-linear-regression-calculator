@@ -31,6 +31,16 @@ function doRegression(X_set, Y_set) {
     return {slope: slope, y_intercept: y_intercept};
 }
 
+function getData() {
+    const collection = document.getElementById("dataPairs").rows;
+    let data = [];
+    for (let i = 1; i < collection.length; i++) {
+        if (collection[i].cells[1].children[0].value && collection[i].cells[1].children[0].value)
+            data.push([collection[i].cells[1].children[0].value, collection[i].cells[1].children[1].value].map(Number));
+    }
+    return data;
+}
+
 function drawChart(slope, yIntercept, dataset) {
     let margin = { top: 20, right: 15, bottom: 20, left: 60 };
     let width = 340 - margin.left - margin.right;
