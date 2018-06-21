@@ -44,6 +44,12 @@ function getData() {
     return {X: X, Y: Y};
 }
 
+function callEverything() {
+    const data = getData();
+    const line = doRegression(data.X, data.Y);
+    drawChart(line.slope, line.y_intercept, data);
+}
+
 function drawChart(slope, yIntercept, dataset) {
     let margin = { top: 20, right: 15, bottom: 20, left: 60 };
     let width = 340 - margin.left - margin.right;
@@ -76,11 +82,16 @@ function drawChart(slope, yIntercept, dataset) {
         .attr('transform', `translate(${margin.left}, ${0})`)
         .call(d3.axisLeft(y));
 
+    let data = [];
+    for (let i = 0; i < dataset.X.length; i++) {
+        data.push({x: dataset.X[i], y: dataset.Y[i]});
+    }
+
     svg.selectAll("circle")
-        .data(dataset)
+        .data(data)
         .enter().append("circle")
-        .attr("cx", function (d) { return x(d[0]); })
-        .attr("cy", function (d) { return y(d[1]); })
+        .attr("cx", function (d) { return x(d.x); })
+        .attr("cy", function (d) { return y(d.y); })
         .attr("r", "8px")
         .attr("fill", "red");
 
