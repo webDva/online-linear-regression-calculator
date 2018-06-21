@@ -11,8 +11,28 @@
 </head>
 
 <body>
-    <div>
+
+    <div class="data-pairs-container row">
+        <table>
+            <tr>
+                <th></th>
+                <th>X</th>
+                <th>Y</th>
+            </tr>
+            <tr *ngFor="let d of dataPairs; let i = index;">
+                <td>{{i + 1}}</td>
+                <td><input #number1 type="number" (input)="dataPairs[i][0] = number1.value;" [value]="dataPairs[i][0]"/></td>
+                <td><input #number2 type="number" (input)="dataPairs[i][1] = number2.value;" [value]="dataPairs[i][1]"/></td>
+            </tr>
+        </table>
         
+        <div class="buttons-container">
+            <button (click)="getRegression(dataPairs)">perform linear regression</button>
+        </div>    
+    </div>
+
+    <div class="chart-container row">
+        <svg class="d3-chart"></svg>
     </div>
 
     <script src="program.js"></script>
