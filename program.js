@@ -53,6 +53,8 @@ function callEverything() {
     const line = doRegression(data.X, data.Y);
     if (line === -1) return;
     drawChart(line.slope, line.y_intercept, data);
+    document.getElementById("slope").innerHTML = "Slope: " + line.slope;
+    document.getElementById("yintercept").innerHTML = "Y-Intercept " + line.y_intercept;
 }
 
 function drawChart(slope, yIntercept, dataset) {

@@ -57,16 +57,34 @@ button:active {
     transition-duration: 0s;
 }
   
-  .d3-chart {
-    width: 400px;
-    height: 400px;
-  }
+.d3-chart {
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);   
+}
    
-  .d3-chart .axis path,
-  .d3-chart .axis line {
-    stroke: #999;
-  }
+.d3-chart .axis path,
+.d3-chart .axis line {
+  stroke: #999;
+}
    
-  .d3-chart .axis text {
-    fill: #999;
+.d3-chart .axis text {
+  fill: #999;
+}
+
+  #mx_message {
+    display: inline;
+    margin: 10px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+  }
+
+  #mx_message p {
+    margin: 2px;
   }
