@@ -67,12 +67,15 @@ function drawChart(slope, yIntercept, dataset) {
 
     svg.selectAll('*').remove();
 
+    const maximumX = dataset.X.reduce((a, b) => {return Math.max(Math.abs(a), Math.abs(b));}) + 10;
+    const maximumY = dataset.Y.reduce((a, b) => {return Math.max(Math.abs(a), Math.abs(b));}) + 10;
+
     let x = d3.scaleLinear()
-        .domain([-100, 100])
+        .domain([-maximumX, maximumX])
         .range([margin.left, width + margin.left]);
 
     let y = d3.scaleLinear()
-        .domain([-100, 100])
+        .domain([-maximumY, maximumY])
         .range([height + margin.right, margin.top]);
 
     // add the x Axis
@@ -97,19 +100,20 @@ function drawChart(slope, yIntercept, dataset) {
         .enter().append("circle")
         .attr("cx", function (d) { return x(d.x); })
         .attr("cy", function (d) { return y(d.y); })
-        .attr("r", "8px")
-        .attr("fill", "red");
+        .attr("r", "4px")
+        .attr("fill", "blue");
 
     // extend the length of the line
-    let A = [0, yIntercept], B = [100, slope * 100 + yIntercept];
+    const maximumXY = Math.max(maximumX, maximumY);
+    let A = [0, yIntercept], B = [maximumXY, slope * maximumXY + yIntercept];
     let newSlope = (B[1] - A[1]) / (B[0] - A[0]);
-    let newY = A[1] + (-100 - A[0]) * newSlope;
+    let newY = A[1] + (-maximumXY - A[0]) * newSlope;
 
     svg.append('line')
-        .style("stroke", "blue")
-        .style("stroke-width", 4)
-        .attr("x1", x(-100))
+        .style("stroke", "black")
+        .style("stroke-width", 2)
+        .attr("x1", x(-maximumXY))
         .attr("y1", y(newY))
-        .attr("x2", x(100))
-        .attr("y2", y(slope * 100 + yIntercept));
+        .attr("x2", x(maximumXY))
+        .attr("y2", y(slope * maximumXY + yIntercept));
 }
