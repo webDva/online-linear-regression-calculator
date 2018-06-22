@@ -56,6 +56,10 @@ button:active {
     border-color: crimson;
     transition-duration: 0s;
 }
+
+.chart-container {
+  visibility: hidden;
+}
   
 .d3-chart {
   width: 400px;
@@ -83,6 +87,7 @@ button:active {
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+    visibility: hidden;
   }
 
   #mx_message p {

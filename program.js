@@ -55,6 +55,8 @@ function callEverything() {
     drawChart(line.slope, line.y_intercept, data);
     document.getElementById("slope").innerHTML = "Slope: " + line.slope;
     document.getElementById("yintercept").innerHTML = "Y-Intercept " + line.y_intercept;
+    document.getElementById("mx_message").style.setProperty("visibility", "visible");
+    document.getElementsByClassName("chart-container")[0].style.setProperty("visibility", "visible");
 }
 
 function drawChart(slope, yIntercept, dataset) {
