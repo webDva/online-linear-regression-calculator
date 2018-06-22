@@ -51,7 +51,7 @@ function getData() {
 function callEverything() {
     const data = getData();
     const line = doRegression(data.X, data.Y);
-    if (line === -1) return;
+    if (line === -1 || isNaN(line.slope) || isNaN(line.y_intercept)) return;
     drawChart(line.slope, line.y_intercept, data);
     document.getElementById("slope").innerHTML = "Slope: " + line.slope;
     document.getElementById("yintercept").innerHTML = "Y-Intercept " + line.y_intercept;
