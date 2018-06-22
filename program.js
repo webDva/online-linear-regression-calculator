@@ -39,7 +39,7 @@ function getData() {
     const collection = document.getElementById("dataPairs").rows;
     let X = [];
     let Y = [];
-    for (let i = 1; i < collection.length; i++) {
+    for (let i = 0; i < collection.length; i++) {
         if (collection[i].cells[1].children[0].value && collection[i].cells[1].children[0].value) {
             X.push(Number(collection[i].cells[1].children[0].value));
             Y.push(Number(collection[i].cells[1].children[1].value));
