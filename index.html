@@ -8,24 +8,27 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="data-pairs-container row">
-        <table id="dataPairs">
-            <tr>
-                <th></th>
-                <th>X</th>
-                <th>Y</th>
-            </tr>
-        </table>
-        
-        <button type="submit" onclick="callEverything()">Submit</button>
-
+    <div class="table-container row">
+        <div class="data-pairs-container row">
+            <table id="dataPairs">
+                <tr>
+                    <th></th>
+                    <th>X</th>
+                    <th>Y</th>
+                </tr>
+            </table>
+        </div>
     </div>
 
-    <div class="chart-container row">
+    <button class="button-class row" type="submit" onclick="callEverything()">Submit</button>
+
+    <div class="chart-container">
         <svg class="d3-chart"></svg>
     </div>
 
@@ -33,7 +36,7 @@
     <script src="https://d3js.org/d3.v5.js"></script>
     <script>
         let table = document.getElementById("dataPairs");
-        for (let i = 1; i <= 20; i++) {
+        for (let i = 1; i <= 100; i++) {
             let row = table.insertRow();
             let cell = row.insertCell(0);
             row.insertCell(0).innerHTML = i;

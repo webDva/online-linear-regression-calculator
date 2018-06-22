@@ -1,0 +1,63 @@
+.table-container {
+    overflow: auto;
+    height: 400px;
+}
+
+table {
+    border: 1px solid #5F6F7E;
+    border-collapse: collapse;
+    margin: 1em 0 2em 0;
+  }
+
+table th {
+    border: 1px solid #5F6F7E;
+    background-color: #E2E2E2;
+    color: #000000;
+    text-align: left;
+    font-weight: normal;
+    padding: 0.2em 0.4em 0.2em 0.4em;
+    margin: 0;
+  }
+  
+  table td {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #E2E2E2;
+  }
+  
+  input {
+    width: 80px;
+    padding: 0.2em 0.4em 0.2em 0.4em;
+    margin: 0;
+  }
+  
+  .row {
+      float: left;
+  }
+  
+  .row:after {
+      content: "";
+      display: block;
+      clear: both;
+  }
+  
+  .button-class {
+      position: relative;
+      display: block;
+      clear: both;
+      margin-top: 20px;
+  }
+  
+  .d3-chart {
+    width: 400px;
+    height: 400px;
+  }
+   
+  .d3-chart .axis path,
+  .d3-chart .axis line {
+    stroke: #999;
+  }
+   
+  .d3-chart .axis text {
+    fill: #999;
+  }
