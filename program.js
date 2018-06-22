@@ -1,4 +1,8 @@
 function doRegression(X_set, Y_set) {
+    if (X_set.length <= 1) {
+        return -1;
+    }
+
     const x_mean = X_set.reduce((sum, current_x) => {return sum + current_x}) / X_set.length;
     const y_mean = Y_set.reduce((sum, current_y) => {return sum + current_y}) / Y_set.length;
 
@@ -47,6 +51,7 @@ function getData() {
 function callEverything() {
     const data = getData();
     const line = doRegression(data.X, data.Y);
+    if (line === -1) return;
     drawChart(line.slope, line.y_intercept, data);
 }
 
