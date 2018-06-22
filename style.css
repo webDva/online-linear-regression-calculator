@@ -41,12 +41,32 @@ table th {
       clear: both;
   }
   
-  .button-class {
+  button {
       position: relative;
       display: block;
       clear: both;
       margin-top: 20px;
+      border: 4px solid orangered;
+      border-radius: 4px;
+      font-size: 20px;
+      font-weight: bold;
+      background: white;
+      padding: 10px 14px;
+      cursor: pointer;
+      transition-duration: 0.2s;
   }
+
+button:hover {
+    background-color: deeppink;
+    border-color: deeppink;
+    color: white;
+}
+
+button:active {
+    background-color: crimson;
+    border-color: crimson;
+    transition-duration: 0s;
+}
   
   .d3-chart {
     width: 400px;
