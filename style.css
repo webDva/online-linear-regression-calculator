@@ -18,15 +18,16 @@
 }
 
 table {
-    border: 1px solid #5F6F7E;
     border-collapse: collapse;
     margin: 1em 0 2em 0;
+    width: 240px;
   }
   
   table td {
     margin: 0;
     padding: 0;
     border: 1px solid #E2E2E2;
+    display: inline;
   }
   
   input {
