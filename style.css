@@ -98,19 +98,18 @@ button:active {
   fill: #999;
 }
 
-  #mx_message {
-    display: inline;
-    background-color: peachpuff;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 10px;
-    font-size: 1.6rem;
-    font-weight: 400;
-    border-radius: 10px;
-    border: 1px solid black;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
-    visibility: hidden;
-  }
+#mx_message {
+  display: inline;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 10px;
+  padding: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid orchid;
+  visibility: hidden;
+}
 
-  #mx_message p {
-    margin: 2px;
-  }
+#mx_message p {
+  margin: 2px;
+}
