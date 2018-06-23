@@ -5,6 +5,13 @@
   align-items: center;  
 }
 
+.table-container span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 30px;
+}
+
 .data-pairs-container {
     overflow: auto;
     height: 400px;
