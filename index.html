@@ -55,7 +55,7 @@
     <div class="tool-content">
             <div class="flexbox-container textarea-container">
                 <div class="data-pairs-container">
-                    <textarea id="dataPairs" placeholder="For example: 82,21"></textarea>
+                    <textarea id="dataPairs"></textarea>
                 </div>
                 <button class="button-class" type="submit" onclick="callEverything()">📉 Calculate</button>
             </div>
@@ -78,6 +78,10 @@
 
     <script src="program.js"></script>
     <script src="https://d3js.org/d3.v5.js"></script>
+    <script>
+        const example = document.getElementById("dataPairs");
+        example.setAttribute("placeholder", "Example:\n1,1\n2,2\n3,3\n10,20\n30,40");
+    </script>
 
 </body>
 
