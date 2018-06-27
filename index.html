@@ -48,16 +48,14 @@
             <h1>Online Linear Regression Calculator</h1>
             <p><i>Online Linear Regression Calculator</i> is a tool that enables you to perform simple linear regression on a set of data points in your browser.</p>
             <h2>How to use</h2>
-            <p>Input a set of data pairs into the table below and then press the "📉 Calculate" button to obtain a chart showing the simple linear regression line for your dataset.</p>
+            <p>Input a set of data pairs into the text area below using comma-seperated values and then press the "📉 Calculate" button to obtain a chart showing the simple linear regression line for your dataset.</p>
         </div>
     </div>
 
     <div class="tool-content">
-            <div class="flexbox-container table-container">
-                <span id="table-head">XY</span>
+            <div class="flexbox-container textarea-container">
                 <div class="data-pairs-container">
-                    <table id="dataPairs">
-                    </table>
+                    <textarea id="dataPairs" placeholder="For example: 82,21"></textarea>
                 </div>
                 <button class="button-class" type="submit" onclick="callEverything()">📉 Calculate</button>
             </div>
@@ -80,24 +78,6 @@
 
     <script src="program.js"></script>
     <script src="https://d3js.org/d3.v5.js"></script>
-    <script>
-        let table = document.getElementById("dataPairs");
-        for (let i = 1; i <= 100; i++) {
-            let row = table.insertRow();
-            let cell = row.insertCell(0);
-            row.insertCell(0).innerHTML = i;
-            
-            let inputField = document.createElement("input");
-            inputField.id = "data-pair-" + i + "-1";
-            inputField.setAttribute("type", "number");
-            cell.appendChild(inputField);
-
-            inputField = document.createElement("input");
-            inputField.id = "data-pair-" + i + "-2";
-            inputField.setAttribute("type", "number");
-            cell.appendChild(inputField);
-        }        
-    </script>
 
 </body>
 

@@ -36,14 +36,12 @@ function doRegression(X_set, Y_set) {
 }
 
 function getData() {
-    const collection = document.getElementById("dataPairs").rows;
+    const dataPairs = document.getElementById("dataPairs").value.split("\n");
     let X = [];
     let Y = [];
-    for (let i = 0; i < collection.length; i++) {
-        if (collection[i].cells[1].children[0].value && collection[i].cells[1].children[0].value) {
-            X.push(Number(collection[i].cells[1].children[0].value));
-            Y.push(Number(collection[i].cells[1].children[1].value));
-        }
+    for (let i = 0; i < dataPairs.length; i++) {
+        X.push(Number(dataPairs[i].split(",")[0]));
+        Y.push(Number(dataPairs[i].split(",")[1]));
     }
     return {X: X, Y: Y};
 }

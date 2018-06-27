@@ -42,42 +42,21 @@ h1, h2 {
   justify-content: center;
 }
 
-#table-head {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  letter-spacing: 30px;
-}
-
-.table-container {
+.textarea-container {
+  margin: 0;
   padding-right: 150px;
 }
 
 .data-pairs-container {
-    overflow: auto;
     height: 400px;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 1em 0 2em 0;
-    width: 240px;
-  }
-  
-  table td {
-    margin: 0;
-    padding: 0;
-    border: 1px solid #E2E2E2;
-    display: inline;
-  }
-  
-  input {
-    width: 80px;
-    padding: 0.2em 0.4em 0.2em 0.4em;
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.1rem;
-  }
+textarea {
+  height: 400px;
+  width: 200px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+}
   
   button {
       position: relative;
