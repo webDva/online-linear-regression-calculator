@@ -85,7 +85,11 @@ function drawChart(slope, yIntercept, dataset) {
     svg.append("g")
         .attr('class', 'x axis')
         .attr('transform', `translate(${0}, ${margin.top + height})`)
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x))
+        .selectAll('text')
+            .attr('dx', '-1.8em')
+            .attr('dy', '0em')
+            .attr('transform', 'rotate(-65)');
 
     // add the y Axis
     svg.append("g")
