@@ -55,6 +55,7 @@ function callEverything() {
     document.getElementById("slope").innerHTML = line.slope.toFixed(2);
     document.getElementById("yintercept").innerHTML = line.y_intercept.toFixed(2);
     document.getElementById("rsquared").innerHTML = line.r_squared.toFixed(2) + "%";
+    document.getElementById("equation").innerHTML = "y = " + line.slope.toFixed(2) + "x + " + line.y_intercept.toFixed(2);
 }
 
 function drawChart(slope, yIntercept, dataset) {

@@ -43,10 +43,6 @@
 
 <body>
 
-    <div class="site-bar">
-        
-    </div>
-
     <div class="tool-content">
         <div class="flexbox-container textarea-container">
             <textarea id="dataPairs"></textarea>
@@ -59,6 +55,7 @@
                 <p class="tab-left">Slope:</p><p class="message-data" id="slope"></p>
                 <p class="tab-left">Y-Intercept:</p><p class="message-data" id="yintercept"></p>
                 <p class="tab-left">R-squared:</p><p class="message-data" id="rsquared"></p>
+                <p class="tab-left">Equation:</p><p class="message-data" id="equation"></p>
             </div>
         </div>
     </div>
@@ -66,8 +63,7 @@
     <script src="program.js"></script>
     <script src="https://d3js.org/d3.v5.js"></script>
     <script>
-        const example = document.getElementById("dataPairs");
-        example.setAttribute("placeholder", "Example:\n1,1\n2,2\n3,3\n10,20\n30,40");
+        document.getElementById("dataPairs").setAttribute("placeholder", "Example:\n1,1\n2,2\n3,3\n10,20\n30,40");
     </script>
 
 </body>

@@ -15,10 +15,6 @@ a {
   color: blue;
 }
 
-.site-bar {
-
-}
-
 /*
 input area
 */
@@ -34,10 +30,6 @@ input area
   margin: 0px 20px;
   float: left;
 }
-
-/* .clearfix {
-  clear: both;
-} */
 
 textarea {
   height: 400px;
@@ -101,7 +93,7 @@ chart area
 #mx_message {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 4px 0;
-  width: 70%;
+  width: 300px;
   padding: 8px;
   font-size: 1em;
   border-radius: 6px;
