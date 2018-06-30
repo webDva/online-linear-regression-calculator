@@ -87,7 +87,7 @@ function drawChart(slope, yIntercept, dataset) {
         .attr('transform', `translate(${0}, ${margin.top + height})`)
         .call(d3.axisBottom(x))
         .selectAll('text')
-            .attr('dx', '-1.8em')
+            .attr('dx', '-2.2em')
             .attr('dy', '0em')
             .attr('transform', 'rotate(-65)');
 
