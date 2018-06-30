@@ -28,11 +28,12 @@ function doRegression(X_set, Y_set) {
     }
 
     const r_xy_correlation = difference_product / Math.sqrt(x_difference_squared * y_difference_squared);
+    const r_squared = Math.pow(r_xy_correlation, 2) * 100;
 
     const slope = r_xy_correlation * (y_standardDeviation / x_standardDeviation);
     const y_intercept = y_mean - slope * x_mean;
 
-    return {slope: slope, y_intercept: y_intercept};
+    return {slope: slope, y_intercept: y_intercept, r_squared: r_squared};
 }
 
 function getData() {
@@ -53,6 +54,7 @@ function callEverything() {
     drawChart(line.slope, line.y_intercept, data);
     document.getElementById("slope").innerHTML = line.slope.toFixed(2);
     document.getElementById("yintercept").innerHTML = line.y_intercept.toFixed(2);
+    document.getElementById("rsquared").innerHTML = line.r_squared.toFixed(2) + "%";
 }
 
 function drawChart(slope, yIntercept, dataset) {
