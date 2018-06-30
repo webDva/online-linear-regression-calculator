@@ -43,36 +43,22 @@
 
 <body>
 
-    <div class="flexbox-container">
-        <div class="information">
-            <h1>Online Linear Regression Calculator</h1>
-            <p><i>Online Linear Regression Calculator</i> is a tool that enables you to perform simple linear regression on a set of data points in your browser.</p>
-            <h2>How to use</h2>
-            <p>Input a set of data pairs into the text area below using comma-seperated values and then press the "📉 Calculate" button to obtain a chart showing the simple linear regression line for your dataset.</p>
-        </div>
+    <div class="site-bar">
+        
     </div>
 
     <div class="tool-content">
-            <div class="flexbox-container textarea-container">
-                <div class="data-pairs-container">
-                    <textarea id="dataPairs"></textarea>
-                </div>
-                <button class="button-class" type="submit" onclick="callEverything()">📉 Calculate</button>
-            </div>
+        <div class="flexbox-container textarea-container">
+            <textarea id="dataPairs"></textarea>
+            <button class="button-class" type="submit" onclick="callEverything()">📉 Calculate</button>
+        </div>
 
         <div class="flexbox-container chart-container">
             <svg class="d3-chart"></svg>
-            <span id="mx_message">
-                <p id="slope"></p>
-                <p id="yintercept"></p>
-            </span>
-        </div>
-    </div>
-
-    <div class="flexbox-container">
-        <div class="information">
-            <h1>Feedback</h1>
-            <p>If you would like to provide any feedback, you can find my e-mail address on my blog, <a href="https://webdva.github.io">webdva.github.io</a>, or you contact me on Twitter (<a href="https://twitter.com/webDva">@webdva</a>).</p>
+            <div id="mx_message">
+                <p class="tab-left">Slope:</p><p id="slope"></p>
+                <p class="tab-left">Y-Intercept:</p><p id="yintercept"></p>
+            </div>
         </div>
     </div>
 

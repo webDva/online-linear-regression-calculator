@@ -51,10 +51,8 @@ function callEverything() {
     const line = doRegression(data.X, data.Y);
     if (line === -1 || isNaN(line.slope) || isNaN(line.y_intercept)) return;
     drawChart(line.slope, line.y_intercept, data);
-    document.getElementById("slope").innerHTML = "Slope: " + line.slope.toFixed(2);
-    document.getElementById("yintercept").innerHTML = "Y-Intercept: " + line.y_intercept.toFixed(2);
-    document.getElementById("mx_message").style.setProperty("visibility", "visible");
-    document.getElementsByClassName("chart-container")[0].style.setProperty("visibility", "visible");
+    document.getElementById("slope").innerHTML = line.slope.toFixed(2);
+    document.getElementById("yintercept").innerHTML = line.y_intercept.toFixed(2);
 }
 
 function drawChart(slope, yIntercept, dataset) {
