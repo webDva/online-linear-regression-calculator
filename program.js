@@ -59,14 +59,14 @@ function callEverything() {
 }
 
 function drawChart(slope, yIntercept, dataset) {
-    let margin = { top: 20, right: 15, bottom: 20, left: 60 };
-    let width = 340 - margin.left - margin.right;
-    let height = 340 - margin.top - margin.bottom;
+    let margin = { top: 0, right: 0, bottom: 40, left: 90 };
+    let width = 360 - margin.left - margin.right;
+    let height = 360 - margin.top - margin.bottom;
 
     let svg = d3.select('svg')
         .attr('width', width + margin.left + margin.right)
         .attr('height', height + margin.top + margin.bottom)
-        .style('background-color', '#efefef');
+        .style('background-color', 'black');
 
     svg.selectAll('*').remove();
 
@@ -108,8 +108,8 @@ function drawChart(slope, yIntercept, dataset) {
         .enter().append("circle")
         .attr("cx", function (d) { return x(d.x); })
         .attr("cy", function (d) { return y(d.y); })
-        .attr("r", "4px")
-        .attr("fill", "blue");
+        .attr("r", "3px")
+        .attr("fill", "white");
 
     // extend the length of the line
     const maximumXY = Math.max(maximumX, maximumY);
@@ -118,8 +118,9 @@ function drawChart(slope, yIntercept, dataset) {
     let newY = A[1] + (-maximumXY - A[0]) * newSlope;
 
     svg.append('line')
-        .style("stroke", "black")
+        .style("stroke", "lightgreen")
         .style("stroke-width", 2)
+        .style("stroke-dasharray", ("2, 2"))
         .attr("x1", x(-maximumXY))
         .attr("y1", y(newY))
         .attr("x2", x(maximumXY))

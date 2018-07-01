@@ -79,16 +79,18 @@ chart area
   width: 400px;
   height: 400px;
   margin: 6px;
-  border: 1px solid black;  
+  border: 1px solid black;
+  padding: 10px;
 }
    
 .d3-chart .axis path,
 .d3-chart .axis line {
-  stroke: #999;
+  stroke: lightgreen;
 }
    
 .d3-chart .axis text {
-  fill: #999;
+  fill: lightgreen;
+  font-size: 1.5em;
 }
 
 #mx_message {
