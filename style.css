@@ -79,8 +79,8 @@ chart area
   width: 400px;
   height: 400px;
   margin: 6px;
-  border: 1px solid black;
   padding: 10px;
+  background-color: black;
 }
    
 .d3-chart .axis path,
